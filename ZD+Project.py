@@ -34,7 +34,9 @@ name = tk.StringVar()
 name_entered = ttk.Entry(ZD, width = 12, textvariable = name).grid(column = 0, row = 1)
 
 #Adding a Button
-action = ttk.Button(ZD, text = "Search", command = print("hello Industry")).grid(column = 2, row = 1)
+def printIndustry():
+    print("industry button clicked!!!")
+action = ttk.Button(ZD, text = "Search", command = printIndustry).grid(column = 2, row = 1)
 # ?? What does click_me as a command mean?Is it necessary to take notes in order to remember the functions?
 
 ttk.Label(ZD, text = "Choose an Industry:").grid(column = 1, row = 0)
