@@ -81,7 +81,10 @@ name = tk.StringVar()
 name_entered = ttk.Entry(ZD, width = 12, textvariable = name).grid(column = 0, row = 6)
 
 #Adding a Button
-action = ttk.Button(ZD, text = "Search", command = print("hello company")).grid(column = 2, row = 6)
+def companyCallback():
+    print("clicked company search!!")
+
+action = ttk.Button(ZD, text = "Search", command = companyCallback).grid(column = 2, row = 6)
 
 ttk.Label(ZD, text = "Choose an skillset:").grid(column = 1, row = 5)
 number = tk.StringVar()
