@@ -1,16 +1,11 @@
-class barchart:
+import matplotlib.pyplot as plt
+import pandas as pd
 
-    import matplotlib.pyplot as plt
-    import pandas as pd
 
-    def __init__(self, object, data, varnames):
-        self.object = object
-        self.data = data
-        self.varnames = varnames
 
-    def create_bar_chart(self):
+def create_bar_chart(var, data, varnames):
 
-        plt.bar(object, data, color='b')
+        plt.bar(var, data, color='b')
         # randomize color?
 
         plt.xlabel(varnames[0])
@@ -21,19 +16,16 @@ class barchart:
         #plt.legend()
         plt.show()
 
-
-
-#how to
-
-
 #Tester
 #import barchart
-#import pandas as pd
-#column_names = [country, IMR, GNI, lifexp, litrate, enrlrate]
+import pandas as pd
+import matplotlib.pyplot as plt
+
+column_names = [company, popularity]
 #df = pd.DataFrame('', names = column_names)
 
-#df = barchart()
-#df.object = []
-#df.data =df.varnames = column_names
-
-
+var = ['a', 'b', 'c', 'd' ]
+data = [1, 2, 3, 4]
+varnames = column_names
+create_bar_chart(var, data, varnames)
+#plt.show()
