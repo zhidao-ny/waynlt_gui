@@ -12,6 +12,15 @@ from PIL import Image, ImageTk
 
 
 # In[13]:
+skilllist = []
+complist = []
+with open("main_skills.txt") as f:
+    skilllist = f.read().split()
+    
+with open("company.txt") as f:
+    for line in f:
+        complist.append(line.strip())
+    
 
 
 ###create a window titled GUI START
@@ -79,7 +88,7 @@ def click_me2():
 ttk.Label(ZD, text = "Choose an skillset:").pack(side = 'left', anchor = tk.CENTER)#grid(column = 1, row = 3)
 number = tk.StringVar()
 skillbox = ttk.Combobox (ZD, width = 12, textvariable = number, state = 'readonly') #??? What readonly 
-skillbox['values'] = ("Skill A","Skill B","Skill C","Skill D","Skill E","Skill F") # what does [] mean?
+skillbox['values'] = skilllist # what does [] mean?
 skillbox.pack(side = 'left', anchor = tk.CENTER)#grid(column = 1, row = 4)
 skillbox.current(0) #What does chosen.current mean?
 
@@ -107,7 +116,7 @@ def click_me3():
 ttk.Label(ZD, text = "Choose an company:").pack(side = 'left', anchor = tk.CENTER)#grid(column = 1, row = 5)
 number = tk.StringVar()
 companybox = ttk.Combobox (ZD, width = 12, textvariable = number, state = 'readonly') #??? What readonly 
-companybox['values'] = ("Comapny A","Company B","Comapany C","Company D","Company E","COmpany F") # what does [] mean?
+companybox['values'] = complist
 companybox.pack(side = 'left', anchor = tk.CENTER)#grid(column = 1, row = 6)
 companybox.current(0) #What does chosen.current mean?
 
