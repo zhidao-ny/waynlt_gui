@@ -1,21 +1,18 @@
 
-# coding: utf-8
-
-# In[2]:
-
-
 import tkinter as tk
 from tkinter import ttk
 from tkinter import scrolledtext
 
 from PIL import Image, ImageTk  
-
+from querytest import companysearch 
+from querytest import skillsearch 
 
 # In[13]:
 skilllist = []
 complist = []
 with open("main_skills.txt") as f:
-    skilllist = f.read().split()
+    for line in f:
+        skilllist.append(line.strip())
     
 with open("company.txt") as f:
     for line in f:
@@ -96,6 +93,7 @@ skillbox.current(0) #What does chosen.current mean?
 #Adding a Button
 def skillBoxCB():
     print(skillbox.get())
+    skillsearch(skillbox.get())
 action = ttk.Button(ZD, text = "Search", command = skillBoxCB).pack(side = 'left', anchor = tk.CENTER)#grid(column = 2, row = 4)
 
 
@@ -123,6 +121,7 @@ companybox.current(0) #What does chosen.current mean?
 #Adding a Button
 def compButtonCB():
     print(companybox.get())
+    companysearch(companybox.get())
 compButton = ttk.Button(ZD, text = "Search", command = compButtonCB).pack(side = 'left', anchor = tk.CENTER)#grid(column = 2, row = 6)
 
 ZD.mainloop()
