@@ -1,7 +1,7 @@
 import sqlite3
 from visual import drawbarchart
 
-db = sqlite3.connect('testdb.sqlite')
+db = sqlite3.connect('db/testdb.sqlite')
 cursor = db.cursor()
 import pandas as pd
 def companysearch(companyname):

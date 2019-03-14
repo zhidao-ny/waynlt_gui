@@ -10,11 +10,11 @@ from querytest import skillsearch
 # In[13]:
 skilllist = []
 complist = []
-with open("main_skills.txt") as f:
+with open("data/main_skills.txt") as f:
     for line in f:
         skilllist.append(line.strip())
     
-with open("company.txt") as f:
+with open("data/company.txt") as f:
     for line in f:
         complist.append(line.strip())
     
@@ -31,7 +31,7 @@ ZD.resizable(0,0)
 #fig = plt.figure()
 
 # Add logo
-image = Image.open("zhidaopic1.gif")
+image = Image.open("img/zhidaopic1.gif")
 photo = ImageTk.PhotoImage(image, master = ZD)
 label = tk.Label(ZD, image=photo)
 label.image = image
