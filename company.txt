@@ -1,28 +1,3 @@
-AT&T
-AbbVie
-BAE Systems
-Businesses Collins Aerospace
-Freddie Mac
-Harlem Village Academies
-Huntington Ingalls Industries (HII-MDIS)
-Kinder Morgan
-NYU Langone Health
-Tetra Tech
-Time Warner
-University of Texas at Austin
-Weill Cornell Medicine
-ADP
-Accenture
-Ascensia Diabetes Care
-Booz Allen Hamilton
-DuPont
-General Dynamics Mission Systems
-GlaxoSmithKline
-L3 Technologies
-Tempus
-University of Washington
-Comcast
-Deloitte
 Google
 Honor
 Leidos
