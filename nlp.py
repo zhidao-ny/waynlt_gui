@@ -16,7 +16,7 @@ import nltk
   Return:
    score: (compound score, positive score, neutral score , negtive score)
   """
-  def sentiment(topic,db="twitter.db",table="tweets",score_func=analyzer, self):
+  def sentiment(topic,db="data/twitter.db",table="tweets",score_func=analyzer, self):
      
       analyzer = SentimentIntensityAnalyzer().polarity_scores
       connection = sqlite3.connect(db)
